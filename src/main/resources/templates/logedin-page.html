@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"> </meta>
+<title>Home Page</title>
+</head>
+<body>
+	
+	<h2>You are now loged in</h2>
+	
+	<hr></hr>
+    
+    <h1>User Created</h1>
+    <p th:text="'Token: ' + ${token.accessToken}" />
+    <p th:text="'Username: ' + ${token.expirationTimeStamp}" />
+    
+    <br></br>
+    
+    <p>
+		<a href="/user/userLog" th:href="@{/user/userLog/}">See your five latest logins</a>
+	</p>
+
+	<p>
+		<a href="/user/login" th:href="@{/user/login}">Login</a>
+	</p>
+	
+	<br></br>
+	
+	<p>
+		<a href="/home" th:href="@{/home}">Home</a>
+	</p>
+	
+</body>
+</html>
